@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Vue tutorial	
+	</title>
+
+</head>
+<body>
+	<div id="root">
+		<ul>
+			<li v-for="customvariable in names" v-text="customvariable"></li>
+		</ul>
+	</div>
+	<script src="https://unpkg.com/vue@2.2.6"></script>
+	<script>
+		var app = new Vue ({
+			el: '#root',
+			data : {
+				names : ['john','knows','schoolboy','q']	
+			},
+			mounted(){
+				alert('charged!')
+			}
+		});
+	</script>
+</body>
+</html>
