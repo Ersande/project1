@@ -11,16 +11,25 @@
 		<ul>
 			<li v-for="customvariable in names" v-text="customvariable"></li>
 		</ul>
+		<input type="text" id="input" v-model="newName">
+		<input type="button" id="button" @click="addName" value="add Name">
 	</div>
 	<script src="https://unpkg.com/vue@2.2.6"></script>
 	<script>
 		var app = new Vue ({
 			el: '#root',
 			data : {
-				names : ['john','knows','schoolboy','q']	
+				names : ['john','knows','schoolboy','q'],
+				newName :''	
+			},
+			methods: {
+				addName(){
+					this.names.push(tmpName);
+					this.newName = '';
+				}
 			},
 			mounted(){
-				alert('charged!')
+				
 			}
 		});
 	</script>
