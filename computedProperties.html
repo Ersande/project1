@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Vue Compute properties
+	</title>
+	<style>
+
+	</style>
+</head>
+<body>
+	<div id="root"> 
+		 <h1>{{ reversedMessage }}</h1>
+		 <h2><b>Completed</b><h2>
+		 <ul> 
+		 	<li v-for ="task in tasks" v-text="task.description"></li>
+		 </ul>
+		 <h2><b>Uncompleted</b><h2>
+		 <ul> 
+		 	<li v-for ="task in incompleteTasks" v-text="task.description"></li>
+		 </ul>
+	</div>
+	<script src="https://unpkg.com/vue@2.2.6"></script>
+	<script>
+		var app = new Vue ({
+			el: '#root',
+			data : {
+				message : "helloworld",
+				tasks :[
+					{ description : 'cia  mondo ' , completed : true },
+					{ description : 'andare al cesso ' , completed : true },
+					{ description : 'leggere ' , completed : false },
+					{ description : 'scrivere ' , completed : false },
+					{ description : 'bestemmiare ' , completed : true }
+				]
+			},
+			methods: {
+				  
+			},
+			computed: {
+			  reversedMessage(){
+			  	return this.message.split('').reverse().join('');
+			  },
+			  incompleteTasks(){
+			  	return this.tasks.filter(task => ! task.completed);
+			  }
+			}
+		});
+	</script>
+</body>
+</html>
