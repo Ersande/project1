@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Vue Tab exercise
+	</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css"></link>
+</head>
+<body>
+	<div id="root">  
+		<tabs>
+			<tab name="About us" :selected="true">
+				<h1>here is the content od about us</h1>
+			</tab>
+			<tab name="Contacts">
+				<h1>here is the content od about Contacts</h1>
+			</tab>
+			<tab name="Mails">
+				<h1>here is the content od about mails</h1>
+			</tab> 
+		</tabs>
+	</div>
+	<script src="https://unpkg.com/vue@2.2.6"></script>
+	<script type="text/javascript" src="components/tab_exercise.js"></script>
+</body>
+</html>
