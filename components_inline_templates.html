@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Vue Tab exercise
+	</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css"></link>
+</head>
+<body>
+	<div id="root">   
+	 	<progress-view inline-template>
+	 		<div>
+	 			<h1>your progress of the course is {{ completionRate }}%</h1>	
+	 			<input type="button" name="incrementValue" @click="completionRate+=10" value="Increment rate">
+	 		</div>
+	 	</progress-view> 
+	</div>
+	<script src="https://unpkg.com/vue@2.2.6"></script>
+	<script type="text/javascript" src="components/components_inline_templates.js"></script>
+</body>
+</html>
