@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Vue Tab exercise
+	</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.0/css/bulma.css"></link>
+</head>
+<body>
+	<div id="root">  
+		 <coupon @applied="onCouponApplied"></coupon>
+		 <h1 v-if="couponApplied">the coupon has been applied</h1>
+	</div>
+	<script src="https://unpkg.com/vue@2.2.6"></script>
+	<script type="text/javascript" src="components/components_comunication.js"></script>
+</body>
+</html>
