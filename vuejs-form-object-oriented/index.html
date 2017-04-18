@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Vue Object oriented form
+	</title>
+	<style>
+		.error-message{
+			color: red;
+			font-weight:bold;
+		}
+	</style>
+</head>
+<body>
+	<div id="root">  
+		 <form method="POST" action="index.php" @submit.prevent="onSubmit" @keydown="form.errors.clear($event.target.name)">
+		 	<div class="control">
+		 		<label for="name " class="label">Project name :</label>	
+		 		<input type="text" id="name" name="name" class="input" v-model="form.name" ><br>
+		 		<span class="error-message" v-if="form.errors.has('name')" v-text="form.errors.get('name')"></span>
+		 	</div>
+			<div class="control">
+		 		<label for="description " class="label">Project description:</label>	
+		 		<input type="text" id="description" name="description" class="input" v-model="form.description"><br>
+		 		<span class="error-message" v-if="form.errors.has('description')" v-text="form.errors.get('description')" ></span>
+		 	</div>
+			<div class="control">
+		 		<input type="submit" value="Create" :disabled="form.errors.any()">
+		 	</div>
+
+		 </form>
+	</div>
+	
+	<script src="https://unpkg.com/vue@2.2.6"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
